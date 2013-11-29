@@ -157,13 +157,13 @@ class Program
                     smtp.Credentials = new NetworkCredential(emailFrom, password);
                     smtp.EnableSsl = enableSSL;
                     Console.WriteLine("sending " + i + "...");
-                    //smtp.Send(mail);
+                    smtp.Send(mail);
                 }
             }
         }
 
         //console output test
-        for (int i = 0; i < ppl.Count; i++)
+        /*for (int i = 0; i < ppl.Count; i++)
         {
             People tmp;
             People tmpTo;
@@ -179,7 +179,7 @@ class Program
                 tmpTo = (People)ppl[i + 1];
             }
             Console.WriteLine("sending to {0}, he's secret santa to {1}", tmp.Name, tmpTo.Name);
-        }
+        }*/
         Console.WriteLine("Completed");
         Console.ReadKey();
     }
