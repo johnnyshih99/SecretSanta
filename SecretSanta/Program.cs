@@ -4,9 +4,7 @@ using System.Collections;
 using System.Net;
 using System.Net.Mail;
 
-/* people class contain people's name and email
-* id is not really needed it was created to easily see if list is randomized
-* 3 accessors to get each private field */
+// people class contain people's name and email
 class People
 {
     string name;
@@ -31,7 +29,7 @@ class People
 
 class Program
 {
-    // allow user input of string masked by asteriks
+    // allow user-input of string masked by asteriks
     static string GetPassword()
     {
         string password = "";
@@ -126,10 +124,10 @@ class Program
             string body = string.Format("Harro,\n{0}, you're secret santa to {1}! Please get him/her something sexy under $30!\n" +
                 "***Please do NOT tell anyone who you got 'cuz that'll just ruin the surprise for everyone!***\n" +
                 "Our secret santa party's on Dec. 2 at 6 pm, " +
-                "so show up on time to 255 Keats Way, Unit 805 (buzzer code 2021). " +
+                "so show up on time to PARTY LOCATION " +
                 "If you don't know how secret santa works, feel free to ask June or Johnny :D" +
                 "\nThanks!" +
-                "\n\n*This is an automated message sent from an email account that Johnny never checks so please don't reply to this email.*" +
+                "\n\n*This is an automated message sent from an email account Johnny never checks so please don't reply to this email.*" +
                 "\n*Direct any questions via Facebook.*",
                 tmp.Name, tmpTo.Name);
 
@@ -150,7 +148,6 @@ class Program
                 // Can set to false, if you are sending pure text.
 
                 //mail.Attachments.Add(new Attachment("C:\\SomeFile.txt"));
-                //mail.Attachments.Add(new Attachment("C:\\SomeZip.zip"));
 
                 using (SmtpClient smtp = new SmtpClient(smtpAddress, portNumber))
                 {
